@@ -1,15 +1,21 @@
 {
-  "name": "bkc-media/twill-cookie-consent",
+  "name": "clickfood/twill-cookie-consent",
   "description": "A cookie twill package",
-  "homepage": "https://github.com/bkc-media/twill-cookie-consent",
+  "homepage": "https://github.com/Heddy147/twill-cookie-consent",
   "license": "MIT",
   "authors": [
-     {
-        "name": "Jeffrey Sevinga",
-        "homepage": "https://bkcmedia.nl",
-        "email": "j.sevinga@bkcmedia.nl",
-        "role": "Software Developer"
-     }
+    {
+       "name": "Jeffrey Sevinga",
+       "homepage": "https://bkcmedia.nl",
+       "email": "j.sevinga@bkcmedia.nl",
+       "role": "Software Developer"
+    },
+    {
+       "name": "Dominik Hendrix",
+       "homepage": "https://clickfood.de",
+       "email": "dominik.hendrix@clickfood.de",
+       "role": "Software Developer"
+    }
   ],
   "require": {
     "php": "^8.0",
