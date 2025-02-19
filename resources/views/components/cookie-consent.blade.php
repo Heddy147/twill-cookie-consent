@@ -72,7 +72,7 @@
                                                     <input type="checkbox" aria-label="Cookie selection" checked disabled name="faker" value="" class="tcc__hidden tcc__toggle-checkbox-input" />
                                                     <span class="tcc__toggle"></span>
                                                 </label>
-                                                <span>Altijd actief</span>
+                                                <span>{{ __('twill-cookie-consent::checkboxes.always_active') }}</span>
                                             </div>
                                         @else
                                             <label class="tcc__flex tcc__items-center tcc__cookie--checkbox-toggle tcc__relative tcc__mb-3">
