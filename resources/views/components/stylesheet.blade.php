@@ -1,0 +1,1 @@
+@if(null !== $cookiesData)<link rel="stylesheet" href="{{ asset('vendor/twill-cookie-consent/package.css') }}">@endif

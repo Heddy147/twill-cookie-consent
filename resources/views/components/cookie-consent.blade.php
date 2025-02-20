@@ -1,7 +1,5 @@
 @cookieNotConsented
     @if(null !== $cookiesData)
-        <link rel="stylesheet" href="{{ asset('vendor/twill-cookie-consent/package.css') }}">
-
         <div class="tcc__cookie-consent tcc__bg-black/30 tcc__fixed tcc__inset-0 tcc__w-screen tcc__min-h-screen tcc__z-[999]">
             <!--- Cookie consent banner -->
             <div class="tcc__fixed tcc__bottom-9 tcc__inset-x-6 tcc__mx-auto tcc__z-40 tcc__bg-white tcc__max-w-7xl tcc__shadow-2xl tcc__p-6 tcc__rounded tcc__flex tcc__flex-col tcc__flex-wrap tcc__z-40">

@@ -57,6 +57,7 @@ class TwillCookieConsentServiceProvider extends TwillPackageServiceProvider
 
         // Register the package view composers.
         View::composer('twill-cookie-consent::components.cookie-consent', ConsentComposer::class);
+        View::composer('twill-cookie-consent::components.stylesheet', ConsentComposer::class);
         View::composer('twill-cookie-consent::components.head-scripts', ScriptComposer::class);
         View::composer('twill-cookie-consent::components.body-scripts', ScriptComposer::class);
         View::composer('twill-cookie-consent::components.footer-scripts', ScriptComposer::class);
