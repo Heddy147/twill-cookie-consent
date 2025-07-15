@@ -33,7 +33,7 @@ class CookieConsentController extends Controller
                 $blockIds[] = $cookieBlock->id;
             }
 
-            $cookie = Cookie::make(config('twill-cookie-consent.cookie_name'), json_encode($blockIds), 60 * 24 * 365, null, null, null, false);
+            $cookie = Cookie::make(config('twill-cookie-consent.cookie_name'), json_encode($blockIds), 60 * 24 * 365, null, null, null, false, true);
         }
 
         return redirect()->back()->withCookie($cookie);
