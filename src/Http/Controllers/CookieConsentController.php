@@ -24,7 +24,7 @@ class CookieConsentController extends Controller
         // Get cookie block id and add to array based on selection else add all blocks.
         if ($request->input('submit-action') === 'acceptSelectedCookies') {
             $blockIds[] = $cookiePreferences;
-            $cookie = Cookie::make(config('twill-cookie-consent.cookie_name'), json_encode($blockIds), 60 * 24 * 365);
+            $cookie = Cookie::make(config('twill-cookie-consent.cookie_name'), json_encode($blockIds), 60 * 24 * 365, null, null, null, false);
 
         } elseif ($request->input('submit-action') === 'acceptAllCookies') {
             // Get all cookie blocks and add to array.
@@ -33,7 +33,7 @@ class CookieConsentController extends Controller
                 $blockIds[] = $cookieBlock->id;
             }
 
-            $cookie = Cookie::make(config('twill-cookie-consent.cookie_name'), json_encode($blockIds), 60 * 24 * 365, null, null, null, false, true);
+            $cookie = Cookie::make(config('twill-cookie-consent.cookie_name'), json_encode($blockIds), 60 * 24 * 365, null, null, null, false);
         }
 
         return redirect()->back()->withCookie($cookie);
