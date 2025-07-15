@@ -26,6 +26,11 @@
         label="Cookie name"
 />
 
+<x-twill::input
+    name="cookie_key"
+    label="Cookie key"
+/>
+
 <x-twill::radios
         name="cookie_type"
         label="Cookie type (required/optional)"

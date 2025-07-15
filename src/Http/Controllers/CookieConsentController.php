@@ -30,7 +30,7 @@ class CookieConsentController extends Controller
             // Get all cookie blocks and add to array.
             $cookiesBlocks = Block::where('type', 'cookie-block')->get();
             foreach ($cookiesBlocks as $cookieBlock) {
-                $blockIds[] = $cookieBlock->id;
+                $blockIds[] = $cookieBlock->input('cookie_key');
             }
 
             $cookie = Cookie::make(config('twill-cookie-consent.cookie_name'), json_encode($blockIds), 60 * 24 * 365, null, null, null, false);

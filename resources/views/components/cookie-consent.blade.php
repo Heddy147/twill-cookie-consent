@@ -67,14 +67,14 @@
                                         @if($block->input('cookie_type') == 'required')
                                             <div class="tcc__flex tcc__items-center tcc__gap-2 tcc__mb-3">
                                                 <label class="tcc__flex tcc__items-center tcc__cookie--checkbox-toggle tcc__relative">
-                                                    <input type="checkbox" aria-label="Cookie selection" checked disabled name="faker" value="" class="tcc__hidden tcc__toggle-checkbox-input" />
+                                                    <input type="checkbox" aria-label="Cookie selection" checked disabled name="cookie_preferences[]" value="{{ $block->input('cookie_key') }}" class="tcc__hidden tcc__toggle-checkbox-input" />
                                                     <span class="tcc__toggle"></span>
                                                 </label>
                                                 <span>{{ __('twill-cookie-consent::checkboxes.always_active') }}</span>
                                             </div>
                                         @else
                                             <label class="tcc__flex tcc__items-center tcc__cookie--checkbox-toggle tcc__relative tcc__mb-3">
-                                                <input type="checkbox" name="cookie_preferences[]" aria-label="Cookie selection" value="{{ $block->getKey() }}" class="tcc__hidden tcc__toggle-checkbox-input" />
+                                                <input type="checkbox" name="cookie_preferences[]" aria-label="Cookie selection" value="{{ $block->input('cookie_key') }}" class="tcc__hidden tcc__toggle-checkbox-input" />
                                                 <span class="tcc__toggle"></span>
                                             </label>
                                         @endif
