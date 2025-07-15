@@ -33,7 +33,7 @@
                             </div>
                             @if(null !== $cookiesBlocks)
                                 @foreach($cookiesBlocks as $block)
-                                    <div class="tcc__nav__item tcc__cursor-pointer tcc__border-bg-slate-100 tcc__border-b-[1px] md:tcc__border-none tcc__py-2 tcc__flex tcc__flex-row tcc__justify-between tcc__items-center @if($block->input('cookie_type') == 'required') tcc__active-preference @endif" id="{{ $block->getKey() }}">
+                                    <div class="tcc__nav__item tcc__cursor-pointer tcc__border-bg-slate-100 tcc__border-b-[1px] md:tcc__border-none tcc__py-2 tcc__flex tcc__flex-row tcc__justify-between tcc__items-center @if($block->input('cookie_type') == 'required') tcc__active-preference @endif" id="{{ $block->input('cookie_key') }}">
                                         <span class="tcc__text-sm">{{ $block->input('cookie_category_name') }}</span>
                                         @if($block->input('cookie_type') == 'required')
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#65a30d" class="tcc__w-6 tcc__h-6 tcc__active">
@@ -61,7 +61,7 @@
                                 </div>
                             @if(null !== $cookiesBlocks)
                                 @foreach($cookiesBlocks as $block)
-                                    <div class="tcc__settings__content-cat tcc__hidden" id="{{ $block->getKey() }}_content">
+                                    <div class="tcc__settings__content-cat tcc__hidden" id="{{ $block->input('cookie_key') }}_content">
                                         <span class="tcc__text-lg md:tcc__text-2xl tcc__font-bold tcc__block tcc__mb-3">{{ $block->input('cookie_category_name') }}</span>
 
                                         @if($block->input('cookie_type') == 'required')
